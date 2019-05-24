@@ -1,0 +1,21 @@
+Package: PatrickMean
+Title: Calculates the Sample Mean
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Patrick",
+           family = "Heinze",
+           role = c("aut", "cre"),
+           email = "a1776437@studentadelaide.edu.au",
+           comment = c(ORCID = "0000-0002-1688-8951"))
+Description: Takes all the numbers in a vector. Adds them up and divides by the number of elements. 
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    ggplot2
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 2.1.0)
+VignetteBuilder: knitr

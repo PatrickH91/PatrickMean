@@ -1,0 +1,71 @@
+---
+title: "My sample mean"
+author: "Patrick Heinze"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{My_sample_mean}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Overview
+The goal of My sample mean is to provide a function to calculate the sample mean of a vector
+
+## Installation
+
+You can install PatrickMean from github with:
+
+```{r gh-installation, eval = FALSE, echo = TRUE}
+# install.packages("devtools")
+devtools::install_github("PatrickH91/PatrickMean")
+```
+
+## Usage
+
+```{r setup}
+library(PatrickMean)
+```
+
+
+## Create some data
+
+First we will check that sample mean gives correct value by calculating the sample mean for the numbers 1 to 10. 
+
+```{r}
+x  <- 1:10
+```
+
+## Using the `my_mean()` function
+
+The `my_mean()` function will take a numeric vector
+
+$$
+x_1, x_2, \ldots, x_n
+$$
+
+and return the sample mean:
+
+$$
+\bar{x} = \frac1n \sum^n_{i = 1}x_i
+$$
+
+```{r}
+my_mean(x)
+```
+
+We can check this is correct with 
+
+$$
+\bar x = \frac{1}{10}(1 + 2 + \ldots + 10) = \frac{1}{10}\times \frac{11\times10}{2} = 5.5.
+$$
+
+
+
